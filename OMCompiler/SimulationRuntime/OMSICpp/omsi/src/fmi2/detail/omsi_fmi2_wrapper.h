@@ -158,6 +158,7 @@ private:
     shared_ptr<IStepEvent> _step_event_system; /// System for step event handling
     shared_ptr<IOMSI> _omsu_system;
     shared_ptr<IOMSIInitialize> _omsu_initialize;
+  shared_ptr<IOMSIAlgLoop> _omsu_algloop;
     std::vector<string> _string_buffer;
     bool* _clockTick;
     bool* _clockSubactive;

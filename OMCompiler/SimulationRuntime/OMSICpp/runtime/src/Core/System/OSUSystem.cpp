@@ -330,6 +330,7 @@ void OSUSystem::initializeMemory()
         _osu_me->instance, 0);
     const fmi2_value_reference_t* vrl = fmi2_import_get_value_referece_list(vl);
     nv = fmi2_import_get_variable_list_size(vl);
+	//vector<fmi2_value_reference_t> real_out_vars_reference(nv);
     for (i = 0; i < nv; i++)
     {
         fmi2_import_variable_t* var = fmi2_import_get_variable(vl, i);
@@ -341,6 +342,7 @@ void OSUSystem::initializeMemory()
             {
                 isParameter = addValueReference(var, _real_out_vars_vr,
                                                 _real_param_vars_vr, _dimReal);
+				_real_out_vars_reference.push_back(get<0>(_real_out_vars_vr[i]));
                 _dimReal++;
             }
             else if (bt == fmi2_base_type_int)
@@ -1080,8 +1082,7 @@ void OSUSystem::getReal(double* z)
 {
     if (_real_out_vars_vr.size() > 0)
     {
-        fmi2_value_reference_t* value_reference_list = &(get < 0
-            > (_real_out_vars_vr[0]));
+        fmi2_value_reference_t* value_reference_list = &_real_out_vars_reference[0];
         fmi2_status_t status = fmi2_import_get_real(_osu_me->instance,
                                                     value_reference_list, _real_out_vars_vr.size(),
                                                     (fmi2_real_t*)z);

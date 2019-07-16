@@ -73,6 +73,7 @@ static fmi2String const _LogCategoryFMUNames[] = {
 
 IOMSI* OMSICallBackWrapper::_omsu_system;
 IOMSIInitialize* OMSICallBackWrapper::_omsu_initialize;
+ IOMSIAlgLoop* OMSICallBackWrapper::_omsu_algloop;
 
 fmi2String OSU::LogCategoryFMUName(LogCategoryFMU category)
 {
@@ -119,6 +120,7 @@ OSU::OSU(fmi2String instanceName, fmi2String GUID,
         1, sizeof(omsi_template_callback_functions_t));
     _osu_functions->initialize_initialization_problem = &OMSICallBackWrapper::setUpInitializeFunction;
     _osu_functions->initialize_simulation_problem = &OMSICallBackWrapper::setUpEvaluateFunction;
+  _osu_functions->initialize_algloop_problem = &OMSICallBackWrapper::setUpAlgLoopSystem;
     _osu_functions->isSet = omsi_true;
 
     //instantiate omsi_t data structure
@@ -130,15 +132,17 @@ OSU::OSU(fmi2String instanceName, fmi2String GUID,
     if (_omsu_system = dynamic_pointer_cast<IOMSI>(_model))
     {
         OMSICallBackWrapper::setOMSISystem(*(_omsu_system.get()));
+	  shared_ptr<IOMSIAlgLoop> _omsu_algloop = _omsu_system->getOMSIAlgLoop();
+	  OMSICallBackWrapper::setOMSIAlgLoop(*(_omsu_algloop.get()));
     }
     else
-        throw std::invalid_argument("Could not initilize OMSI callbacks");
+	  throw std::invalid_argument("Could not initilize OMSI callbacks _omsu_system");
     if (shared_ptr<IOMSIInitialize> omsu_initilize = dynamic_pointer_cast<IOMSIInitialize>(_model))
     {
         OMSICallBackWrapper::setOMSIInitialize(*(omsu_initilize.get()));
     }
     else
-        throw std::invalid_argument("Could not initilize OMSI callbacks");
+	  throw std::invalid_argument("Could not initilize OMSI callbacks omsu_initilze");
     //initialize omsi function callbacks
     omsi_intialize_callbacks(_omsu, _osu_functions);
 

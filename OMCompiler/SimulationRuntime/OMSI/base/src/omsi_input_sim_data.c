@@ -210,6 +210,11 @@ omsi_status omsu_allocate_sim_data(omsi_t*                          omsu,
     }
 
     /* Instantiate function_vars and pre_vars in all omsi_functions */
+	if (omsu_instantiate_omsi_function_func_vars(omsu->sim_data->initialization, omsu->sim_data->model_vars_and_params, omsu->sim_data->pre_vars) != omsi_ok) {
+		filtered_base_logger(global_logCategories, log_statuserror, omsi_error,
+			"fmi2Instantiate: in omsu_allocate_sim_data: Could not instantiate omsi_function variables.");
+		return omsi_error;
+	}
     if (omsu_instantiate_omsi_function_func_vars(omsu->sim_data->simulation, omsu->sim_data->model_vars_and_params, omsu->sim_data->pre_vars) != omsi_ok) {
         filtered_base_logger(global_logCategories, log_statuserror, omsi_error,
                 "fmi2Instantiate: in omsu_allocate_sim_data: Could not instantiate omsi_function variables.");

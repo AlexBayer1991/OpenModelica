@@ -219,6 +219,7 @@ private:
     output_der_vars_t _der_vars;
     output_res_vars_t _res_vars;
     //value references and index in memory
+	vector<fmi2_value_reference_t> _real_out_vars_reference;
     out_vars_vr_t _real_out_vars_vr;
     out_vars_vr_t _real_param_vars_vr;
     out_vars_vr_t _int_out_vars_vr;
