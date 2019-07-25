@@ -67,7 +67,12 @@ template generateEquationFunction(SimEqSystem eq, String modelNamePrefixStr,Stri
 
   let funcName = (match eq
     case SES_RESIDUAL(__) then
+    match  Config.simCodeTarget()
+    case "omsic" then
       "resFunction"
+    case "omsicpp" then
+      "omsi_res" + modelFunctionnamePrefixStr
+    end match
     case SES_ALGEBRAIC_SYSTEM(__) then
       "algSystFunction"
     else
@@ -103,7 +108,7 @@ template generateEquationFunction(SimEqSystem eq, String modelNamePrefixStr,Stri
   case "omsic" then
   'void <%CodegenUtil.symbolName(modelNamePrefixStr,funcName)%>_<%ix%>(<%funcArguments%>){'
   case "omsicpp" then
-   'void <%modelNamePrefixStr%>::<%funcName%>_<%ix%>(<%funcArguments%>){'
+   'void <%modelNamePrefixStr%>Algloop::<%funcName%>_<%ix%>(<%funcArguments%>){'
    end match%>
     <%if not stringEq(varDecls, "") then
       <<
@@ -168,14 +173,31 @@ template equationCall(SimEqSystem eq, String modelNamePrefixStr,String modelFunc
       >>
     end match
   case SES_RESIDUAL(__) then
-    <<
-    <%CodegenUtil.symbolName(modelNamePrefixStr,"resFunction")%>_<%index%>(<%input%>);
-    >>
+    let i = index
+    match  Config.simCodeTarget()
+    case "omsic" then
+      <<
+      <%CodegenUtil.symbolName(modelNamePrefixStr,"resFunction")%>_<%i%>(<%input%>);
+      >>
+    case "omsicpp" then
+      <<
+      omsi_res<%modelFunctionnamePrefixStr%>_<%i%>(<%input%>);
+      >>
+    end match
   case SES_ALGEBRAIC_SYSTEM(__) then
+    let algIndex = algSysIndex
+    match  Config.simCodeTarget()
+    case "omsic" then
     <<
-    new_status = <%CodegenUtil.symbolName(modelNamePrefixStr,omsiName)%>_algSystFunction_<%algSysIndex%>(<%input%>);
+    new_status = <%CodegenUtil.symbolName(modelNamePrefixStr,omsiName)%>_algSystFunction_<%algIndex%>(<%input%>);
     status = (new_status==omsi_ok && status==omsi_ok) ? omsi_ok:new_status;
     >>
+    case "omsicpp" then
+      <<
+      new_status = omsi_solve_algebraic_system(<%input%>);
+      status = (new_status==omsi_ok && status==omsi_ok) ? omsi_ok:new_status;
+      >>
+    end match
   else
     /* ToDo: generate Warning */
     <<
@@ -256,7 +278,7 @@ template generateDereivativeMatrixColumnFunction(OMSIFunction column, String mod
   case omsiFunction as OMSI_FUNCTION(__) then
     let bodyBuffer = ( equations |> eq=>
       <<
-      <%generateEquationFunction(eq, modelName,"",omsiFunction.context, &functionPrototypes)%>
+      <%generateEquationFunction(eq, modelName,"Function",omsiFunction.context, &functionPrototypes)%>
       >>
     ;separator="\n")
 
@@ -278,17 +300,31 @@ template generateDereivativeMatrixColumnCall(OMSIFunction column, String modelNa
   case OMSI_FUNCTION() then
     let bodyBuffer = ( equations |> eq =>
       <<
-      <%equationCall(eq, modelName,"", "this_function, model_vars_and_params", omsiName)%>
+      <%equationCall(eq, modelName,"Function", "this_function, model_vars_and_params", omsiName)%>
       >>
     ;separator="\n")
 
+  
+  match Config.simCodeTarget()
+  case "omsic" then
   let &functionPrototypes += <<omsi_status <%CodegenUtil.symbolName(modelName,omsiName)%>_derivativeMatFunc_<%index%>(omsi_function_t* this_function, const omsi_values* model_vars_and_params, void* data);<%\n%>>>
-
   <<
   /*
   Description something
   */
   omsi_status <%CodegenUtil.symbolName(modelName,omsiName)%>_derivativeMatFunc_<%index%>(omsi_function_t* this_function, const omsi_values* model_vars_and_params, void* data){
+
+    <%bodyBuffer%>
+
+    return omsi_ok;
+  }
+  >>
+  case "omsicpp" then
+  <<
+  /*
+  Description something
+  */
+  omsi_status <%modelName%>Algloop::evaluate_omsi_derivativeFunction(omsi_function_t* this_function, const omsi_values* model_vars_and_params, void* data){
 
     <%bodyBuffer%>
 

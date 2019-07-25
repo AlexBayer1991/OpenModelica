@@ -192,6 +192,10 @@ let initparameqs   = match  Config.simCodeTarget()
       virtual void initializeBoundVariables();
       virtual void initParameterEquations();
       virtual void initEquations();
+      <%match  Config.simCodeTarget()
+      case "omsicpp" then
+           'virtual void initPointers();'
+      end match%>
       virtual IMixedSystem* clone();
       <%if(boolAnd(boolNot(Flags.isSet(Flags.HARDCODED_START_VALUES)), Flags.isSet(Flags.GEN_DEBUG_SYMBOLS))) then
         <<
@@ -504,8 +508,16 @@ template simulationInitCppFile(SimCode simCode, Text& extraFuncs, Text& extraFun
 ::=
 match simCode
 case SIMCODE(modelInfo = MODELINFO(__)) then
+   let &modelName = buffer ""
+   let &modelName += lastIdentOfPath(modelInfo.name)
    <<
    <%algloopfilesInclude(listAppend(listAppend(allEquations, initialEquations), getClockedEquations(getSubPartitions(clockedPartitions))), simCode, &extraFuncs, &extraFuncsDecl, extraFuncsNamespace)%>
+   <%match Config.simCodeTarget()
+   case "omsicpp" then
+      <<#include "OMCpp<%modelName%>Initialize.h"
+      #include "OMCpp<%modelName%>Algloop.h" 
+      #include <Core/System/IOMSI.h> >>
+   end match%>
    //omsi header
    #include <omsi.h>
 
@@ -513,6 +525,10 @@ case SIMCODE(modelInfo = MODELINFO(__)) then
    : <%lastIdentOfPath(modelInfo.name)%><%match  Config.simCodeTarget() case "omsicpp" then 'StateSelection(globalSettings,omsu)' else  'WriteOutput(globalSettings,omsu)' %>
    , _constructedExternalObjects(false)
    {
+   <%match Config.simCodeTarget()
+   case "omsicpp" then
+       '_algLoop = shared_ptr<IOMSIAlgLoop>(new <%modelName%>Algloop(this, __z, __zDot, _conditions, _discrete_events));'
+   end match%>
      InitializeDummyTypeElems();
    }
 
@@ -5969,6 +5985,11 @@ case SIMCODE(modelInfo = MODELINFO(__),makefileParams = MAKEFILE_PARAMS(__),init
 
       //init equations
       initEquations();
+      <%match  Config.simCodeTarget()
+      case "omsicpp" then
+       'initPointers();'
+      end match
+      %>
 
       for(int i = 0; i < _dimZeroFunc; i++)
       {
@@ -6010,8 +6031,15 @@ case SIMCODE(modelInfo = MODELINFO(__),makefileParams = MAKEFILE_PARAMS(__),init
         end match
         %>
       }
-
-
+     void <%lastIdentOfPath(modelInfo.name)%>Initialize::initPointers()
+      {
+      <%match  Config.simCodeTarget()
+      case "omsicpp" then
+      <<
+          initialize_omsi_initialize_functions(_omsu->sim_data->simulation);
+       >>
+      end match%> 
+      } 
 
    <%boundparameterequations%>
    <%init2(simCode, &extraFuncs, &extraFuncsDecl, extraFuncsNamespace, modelInfo, stateDerVectorName, useFlatArrayNotation)%>
@@ -6883,7 +6911,11 @@ template generateHeaderIncludeString(SimCode simCode ,Text& extraFuncs,Text& ext
 ::=
 match simCode
 case SIMCODE(modelInfo=MODELINFO(__), extObjInfo=EXTOBJINFO(__)) then
-  <<
+  let &classContent = buffer""
+  let &modelName = buffer ""
+  let &classContent += algloopForwardDeclaration(listAppend(listAppend(allEquations, initialEquations), getClockedEquations(getSubPartitions(clockedPartitions))), simCode, &extraFuncs, &extraFuncsDecl, extraFuncsNamespace)
+  let &modelName += lastIdentOfPath(modelInfo.name)
+ <<
   #pragma once
   #if defined(__TRICORE__) || defined(__vxworks)
     #define BOOST_EXTENSION_SYSTEM_DECL
@@ -6927,7 +6959,12 @@ case SIMCODE(modelInfo=MODELINFO(__), extObjInfo=EXTOBJINFO(__)) then
   class EventHandling;
   class DiscreteEvents;
 
-  <%algloopForwardDeclaration(listAppend(listAppend(allEquations, initialEquations), getClockedEquations(getSubPartitions(clockedPartitions))), simCode, &extraFuncs, &extraFuncsDecl, extraFuncsNamespace)%>
+  <%match Config.simCodeTarget()
+  case "omsicpp" then
+  'class <%modelName%>Algloop;'
+  else
+  classContent
+  end match%>
 
   /*****************************************************************************
   *
@@ -6967,8 +7004,14 @@ template generateClassDeclarationCode(SimCode simCode,Context context,Text& extr
 ::=
 match simCode
 case SIMCODE(modelInfo = MODELINFO(__)) then
-
-let friendclasses = generatefriendAlgloops(listAppend(listAppend(allEquations, initialEquations), getClockedEquations(getSubPartitions(clockedPartitions))), simCode, &extraFuncs, &extraFuncsDecl, extraFuncsNamespace)
+let cppFrienclasses = generatefriendAlgloops(listAppend(listAppend(allEquations, initialEquations), getClockedEquations(getSubPartitions(clockedPartitions))), simCode, &extraFuncs, &extraFuncsDecl, extraFuncsNamespace)
+let omsicppFriendclasses = lastIdentOfPath(modelInfo.name)
+let friendclasses = (match Config.simCodeTarget()
+case "omsicpp" then
+"friend class " + omsicppFriendclasses + "Algloop;"
+case "Cpp" then
+cppFrienclasses
+end match)
 let algloopsolvers = generateAlgloopsolverVariables(modelInfo,simCode, &extraFuncs, &extraFuncsDecl, extraFuncsNamespace)
 
 let algloopsystems = generateAlgloopsSystemVariables(listAppend(listAppend(allEquations, initialEquations), getClockedEquations(getSubPartitions(clockedPartitions))), simCode, &extraFuncs, &extraFuncsDecl, extraFuncsNamespace )
@@ -7087,6 +7130,10 @@ match modelInfo
 
       shared_ptr<IPropertyReader> _reader;
       shared_ptr<IAlgLoopSolverFactory> _algLoopSolverFactory;    ///< Factory that provides an appropriate solver
+      <%match Config.simCodeTarget()
+         case "omsicpp" then
+           'shared_ptr<IOMSIAlgLoop> _algLoop;'
+      end match%>
       <%algloopsolvers%>
       <%algloopsystems%>
       <%jacalgloopsystems%>
@@ -11052,7 +11099,13 @@ template algloopMainfile(SimCode simCode, Text& extraFuncs, Text& extraFuncsDecl
     //jac files
     <%jacfiles%>
     //alg loop files
-    <%algloopfiles%>
+    <%match Config.simCodeTarget()
+    case "omsicpp" then
+        <<#include "OMCpp<%filename%>Algloop.h"
+        #include "OMCpp<%filename%>Algloop.cpp">>
+    else
+    algloopfiles
+    %>
     >>
 end algloopMainfile;
 
