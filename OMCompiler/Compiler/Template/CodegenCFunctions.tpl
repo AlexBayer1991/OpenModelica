@@ -4152,6 +4152,7 @@ template contextCref(ComponentRef cr, Context context, Text &auxFunction)
   case JACOBIAN_CONTEXT(jacHT=SOME(_))
     then (match Config.simCodeTarget()
           case "omsic" then crefOMSI(cr, context)
+          case "omsicpp" then crefOMSI(cr, context)
           else jacCrefs(cr, context, 0))
 
   case OMSI_CONTEXT(__) then crefOMSI(cr, context)

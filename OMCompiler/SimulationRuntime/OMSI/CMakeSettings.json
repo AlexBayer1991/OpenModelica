@@ -17,11 +17,11 @@
         },
         {
           "name": "CMAKE_INSTALL_PREFIX",
-          "value": "C:\\OpenModelica\\omc_neu\\omc_win32_omsi\\build"
+          "value": "C:\\Projekte\\omc_neu\\OpenModelica\\build"
         },
         {
-          "name": "OMC_LIB",
-          "value": "lib/omc"
+          "name": "LIB_OMC",
+          "value": "lib/omc/"
         }
       ],
       "ctestCommandArgs": "",
@@ -49,11 +49,11 @@
         },
         {
           "name": "CMAKE_INSTALL_PREFIX",
-          "value": "C:\\OpenModelica\\omc_neu\\omc_win32_omsi\\build"
+          "value": "C:\\Projekte\\omc_neu\\OpenModelica\\build"
         },
         {
           "name": "LIB_OMC",
-          "value": "lib/omc"
+          "value": "lib/omc/"
         }
       ],
       "ctestCommandArgs": "",
@@ -67,7 +67,7 @@
     {
       "environments": [
         {
-          "OMDEV": "C:\\Projekte\\OMDev_GCC5_3_0",
+          "OMDEV": "D:\\OpenModelica\\OMDev_GCC5_3_0",
           "MINGW64_ROOT": "C:\\Projekte\\OMDev_GCC5_3_0\\tools\\msys\\mingw64",
           "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
           "FLAVOR": "x86_64-w64-mingw32",
@@ -104,7 +104,7 @@
         },
         {
           "name": "CMAKE_INSTALL_PREFIX",
-          "value": "C:\\OpenModelica\\omc_neu\\omc_win32_omsi\\build"
+          "value": "C:\\Projekte\\omc_neu\\OpenModelica\\build"
         },
         {
           "name": "USE_CPP_03",

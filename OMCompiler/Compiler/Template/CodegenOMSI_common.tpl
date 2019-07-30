@@ -954,7 +954,7 @@ template insertCopyrightOpenModelica()
   >>
 end insertCopyrightOpenModelica;
 
-template generateAlgloopfile(SimCode simCode ,Text& extraFuncs,Text& extraFuncsDecl,Text extraFuncsNamespace,list<SimEqSystem> eqs, Context context, Text stateDerVectorName, Boolean useFlatArrayNotation, OMSIFunction omsiFunction, Text &functionAlgloopHeader)
+template generateAlgloopfile(SimCode simCode ,Text& extraFuncs,Text& extraFuncsDecl,Text extraFuncsNamespace,list<SimEqSystem> eqs, Context context, Text stateDerVectorName, Boolean useFlatArrayNotation, OMSIFunction myOmsiFunction, Text &functionAlgloopHeader)
 ::=
 match simCode
 case SIMCODE(modelInfo = MODELINFO(__)) then
@@ -1002,7 +1002,7 @@ case SIMCODE(modelInfo = MODELINFO(__)) then
    }
 
 
-   <%match omsiFunction
+   <%match myOmsiFunction
        case OMSI_FUNCTION(context=context as SimCodeFunction.OMSI_CONTEXT(__)) then
           let outputAlgloop = (equations |> eqsystem hasindex i0 =>
           match eqsystem
