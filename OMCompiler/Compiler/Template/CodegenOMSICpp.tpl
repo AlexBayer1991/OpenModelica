@@ -797,6 +797,7 @@ case SIMCODE(modelInfo=MODELINFO(__), makefileParams=MAKEFILE_PARAMS(__), simula
   let libsStr = (makefileParams.libs |> lib => lib ;separator=" ")
   let libsPos1 = if not dirExtra then libsStr //else ""
   let libsPos2 = if dirExtra then libsStr // else ""
+  let mkdir = match makefileParams.platform case "win32" case "win64" then '"mkdir.exe"' else 'mkdir'
   let ParModelicaLibs = if acceptParModelicaGrammar() then '-lOMOCLRuntime -lOpenCL' // else ""
   let extraCflags = match sopt case SOME(s as SIMULATION_SETTINGS(__)) then
     match s.method case "dassljac" then "-D_OMC_JACOBIAN "
@@ -878,7 +879,6 @@ case SIMCODE(modelInfo=MODELINFO(__), makefileParams=MAKEFILE_PARAMS(__), simula
   #need boost system lib prior to C++11, forcing also dynamic libs
   BINARIES=$(BINARIES) $(BOOST_LIBS)/$(BOOST_SYSTEM_LIB)$(DLLEXT) $(BOOST_LIBS)/$(BOOST_FILESYSTEM_LIB)$(DLLEXT)
 
-
   $(MODEL_NAME).fmu: $(MODELICA_SYSTEM_LIB)$(DLLEXT)
   <%\t%>rm -rf binaries
   <%\t%>mkdir -p "binaries/$(PLATFORM)"
@@ -891,9 +891,6 @@ case SIMCODE(modelInfo=MODELINFO(__), makefileParams=MAKEFILE_PARAMS(__), simula
   <%\t%>rm -f $(MODEL_NAME).fmu
   <%\t%>zip -r "$(MODEL_NAME).fmu" modelDescription.xml binaries resources
   <%\t%>rm -rf binaries
-
-  $(MODELICA_SYSTEM_LIB)$(DLLEXT):
-   <%\t%>$(CXX)  /Fe$(MODELICA_SYSTEM_LIB)$(DLLEXT) $(CALCHELPERMAINFILE) $(CFLAGS) $(LDSYSTEMFLAGS) <%dirExtra%> <%libsPos1%> <%libsPos2%>
 
   >>
 end match

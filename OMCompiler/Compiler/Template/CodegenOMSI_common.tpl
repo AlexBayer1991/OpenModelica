@@ -1250,10 +1250,13 @@ template generateOmsiCppFunctionCode_inner(OMSIFunction omsiFunction, String Fil
   let &contentFunction = buffer ""
   let fileNamePrefix = CodegenUtilSimulation.fileNamePrefix(getSimCode())
   let fullPathPrefix = CodegenUtilSimulation.fullPathPrefix(getSimCode())
-  //match  Config.simCodeTarget()
-  //case "omsic" then
-    // let &contentFunction += "," + omsiName + "->function_vars"
-  //end match
+  let _ = match Config.simCodeTarget()
+  case "omsic" then
+     let &contentFunction += "," + omsiName + "->function_vars"
+     <<>>
+  else 
+     <<>>
+  end match
    
   match omsiFunction
   case OMSI_FUNCTION(context=context as SimCodeFunction.OMSI_CONTEXT(__)) then

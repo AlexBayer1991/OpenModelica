@@ -1,26 +1,58 @@
 make -f Makefile.omdev.mingw -C OMCompiler OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build OMENCRYPTION=
+make -C libraries BUILD_DIR=/c/Projekte/omc_neu/openmodelica/build/lib/omlibrary core
 make[1]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird betreten
 Creating dirs: /c/Projekte/omc_neu/openmodelica/build/bin /c/Projekte/omc_neu/openmodelica/build/lib/omc/emcc /c/Projekte/omc_neu/openmodelica/build/lib/omc /c/Projekte/omc_neu/openmodelica/build/include/omc/c/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/gc/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/linearization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/dataReconciliation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/optimization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/results/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/initialization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/meta/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/util/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi1/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi2/ /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API /c/Projekte/omc_neu/openmodelica/build/share/omc/java/ /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/ /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels /c/Projekte/omc_neu/openmodelica/build/share/man//man1/
+make[1]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/libraries“ wird betreten
+make[1]: Für das Ziel „core“ ist nichts zu tun.
+make[1]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/libraries“ wird verlassen
 
 test ! -e .git || cp -puf common/pre-commit.sh `git rev-parse --git-dir`/hooks/pre-commit || echo "unlocated git"
-Current revision: v1.14.0-dev-26587-g501deaf6de
-No change in revision
+Current revision: v1.14.0-dev-26588-g76a4d70f68
 Building OMC using OMDev with the following settings...
+cp ./3rdParty/antlr/3.2/tool/antlr-3.2.jar ./3rdParty/antlr/3.2/tool/antlr-2.7.7.jar /c/Projekte/omc_neu/openmodelica/build/share/omc/java//
+make -f Makefile.omdev.mingw /c/Projekte/omc_neu/openmodelica/build/lib/omc/libsundials_ida.a
 Using OMDev: /c/Projekte/OMDev_GCC5_3_0
+No change in revision
+make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird betreten
 Using Files:
+cp -pPR 3rdParty/FMIL/build/ExpatEx/install/lib/libexpat.a /c/Projekte/omc_neu/openmodelica/build/lib/omc
+Creating dirs: /c/Projekte/omc_neu/openmodelica/build/bin /c/Projekte/omc_neu/openmodelica/build/lib/omc/emcc /c/Projekte/omc_neu/openmodelica/build/lib/omc /c/Projekte/omc_neu/openmodelica/build/include/omc/c/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/gc/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/linearization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/dataReconciliation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/optimization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/results/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/initialization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/meta/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/util/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi1/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi2/ /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API /c/Projekte/omc_neu/openmodelica/build/share/omc/java/ /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/ /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels /c/Projekte/omc_neu/openmodelica/build/share/man//man1/
 Using Path : /mingw32/bin:/usr/local/bin:/usr/bin:/bin:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Program Files/Anaconda3/BOSCH:/c/Program Files (x86)/Intel/iCLS Client:/c/Program Files/Intel/iCLS Client:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files/7-Zip:/c/Program Files (x86)/Plantronics/Spokes3G:/c/Users/baa6lo/.dnx/bin:/c/Program Files/Microsoft DNX/Dnvm:/c/Program Files/Git/cmd:/c/Program Files (x86)/Webex/Webex/Applications:/c/Program Files/TortoiseGit/bin:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files/doxygen/bin:/c/Users/baa6lo/AppData/Local/Microsoft/WindowsApps:/c/Projekte/omc_neu/msys/:/c/Projekte/omc_neu/Openmodelica/build/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+mkdir -p /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels
+cp -p Examples/*.* /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels/
 Current directory: /c/Projekte/omc_neu/openmodelica/OMCompiler
+
 Building in OMBUILDDIR: /c/Projekte/omc_neu/openmodelica/build
 which gcc
 /mingw32/bin/gcc
-cp ./3rdParty/antlr/3.2/tool/antlr-3.2.jar ./3rdParty/antlr/3.2/tool/antlr-2.7.7.jar /c/Projekte/omc_neu/openmodelica/build/share/omc/java//
-make -f Makefile.omdev.mingw /c/Projekte/omc_neu/openmodelica/build/lib/omc/libsundials_ida.a
-make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird betreten
-Creating dirs: /c/Projekte/omc_neu/openmodelica/build/bin /c/Projekte/omc_neu/openmodelica/build/lib/omc/emcc /c/Projekte/omc_neu/openmodelica/build/lib/omc /c/Projekte/omc_neu/openmodelica/build/include/omc/c/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/gc/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/linearization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/dataReconciliation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/optimization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/results/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/initialization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/meta/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/util/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi1/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi2/ /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API /c/Projekte/omc_neu/openmodelica/build/share/omc/java/ /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/ /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels /c/Projekte/omc_neu/openmodelica/build/share/man//man1/
+(time cp SimulationRuntime/OpenTurns/* /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/)
+rm -f /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels/CMake*.txt
+make -C Compiler/Translation OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build release
 
+real	0m0.261s
+user	0m0.031s
+sys	0m0.186s
+(cd tools/debugging/ && time g++ BreakProcess.cpp -o BreakProcess -static-libgcc)
+make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/Translation“ wird betreten
+for locale in de sv es; do mkdir -p /c/Projekte/omc_neu/openmodelica/build/share/locale//$locale/LC_MESSAGES && msgfmt -o/c/Projekte/omc_neu/openmodelica/build/share/locale//$locale/LC_MESSAGES/openmodelica.mo $locale.po; done
 make[2]: „/c/Projekte/omc_neu/openmodelica/build/lib/omc/libsundials_ida.a“ ist bereits aktuell.
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird verlassen
-cp -pPR 3rdParty/FMIL/build/ExpatEx/install/lib/libexpat.a /c/Projekte/omc_neu/openmodelica/build/lib/omc
+make -C SimulationRuntime/ParModelica/explicit/openclrt -f Makefile.omdev.mingw OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
+make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/ParModelica/explicit/openclrt“ wird betreten
+mkdir -p /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+cp -rp omc_ocl_interface.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+cp -rp omc_ocl_common_header.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+cp -rp omc_ocl_memory_ops.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+cp -rp libParModelicaExpl.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/
+cp -rp ParModelicaBuiltin.mo /c/Projekte/omc_neu/openmodelica/build/lib/omc/
+make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/Translation“ wird verlassen
+cp -rp OCLRuntimeUtil.cl /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/ParModelica/explicit/openclrt“ wird verlassen
+
+real	0m2.474s
+user	0m0.078s
+sys	0m0.046s
+(cd tools/debugging/ && cp BreakProcess.exe /c/Projekte/omc_neu/openmodelica/build/bin)
 cd SimulationRuntime/OMSI; \
  mkdir -p Build_static; (cd ./Build_static; echo "change to Build_static"; CC="gcc" CXX="g++" CFLAGS="-g -O2 -falign-functions" CXXFLAGS="" CPPFLAGS="" LDFLAGS="" /c/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake -G "MSYS Makefiles" --build . -DPLATFORM=static -DCMAKE_BUILD_TYPE=Debug -DIS_MINGW32=ON -DIS_MINGW64=OFF -DCMAKE_INSTALL_PREFIX:PATH="/c/Projekte/omc_neu/openmodelica/build" -DLIB_OMC=lib/omc ..; make );  mkdir -p Build_dynamic; (cd ./Build_dynamic; echo "change to Build_dynamic"; CC="gcc" CXX="g++" CFLAGS="-g -O2 -falign-functions" CXXFLAGS="" CPPFLAGS="" LDFLAGS="" /c/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake -G "MSYS Makefiles" --build . -DPLATFORM=dynamic -DCMAKE_BUILD_TYPE=Debug -DIS_MINGW32=ON -DIS_MINGW64=OFF -DCMAKE_INSTALL_PREFIX:PATH="/c/Projekte/omc_neu/openmodelica/build" -DLIB_OMC=lib/omc ..; make );
 change to Build_static
@@ -96,8 +128,14 @@ make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRu
 make -f base/CMakeFiles/OMSIBase.dir/build.make base/CMakeFiles/OMSIBase.dir/depend
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird betreten
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -E cmake_depends "MSYS Makefiles" /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/base /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/base /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/base/CMakeFiles/OMSIBase.dir/DependInfo.cmake --color=
+echo Copying needed .dlls to the /c/Projekte/omc_neu/openmodelica/build/bin directory
+Copying needed .dlls to the /c/Projekte/omc_neu/openmodelica/build/bin directory
+# build 32 bit libOpenCL.a
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird verlassen
 make -f base/CMakeFiles/OMSIBase.dir/build.make base/CMakeFiles/OMSIBase.dir/build
+test ! -f /c/WINDOWS/SysWOW64/OpenCL.dll || gendef - /c/WINDOWS/SysWOW64/OpenCL.dll > /c/Projekte/omc_neu/openmodelica/build/lib/omc/OpenCL.def || true
+ * [C:/WINDOWS/SysWOW64/OpenCL.dll] Found PE image
+test ! -f /c/WINDOWS/SysWOW64/OpenCL.dll || dlltool -l /c/Projekte/omc_neu/openmodelica/build/lib/omc/libOpenCL.a -d /c/Projekte/omc_neu/openmodelica/build/lib/omc/OpenCL.def -A -k || true
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird betreten
 make[4]: Für das Ziel „base/CMakeFiles/OMSIBase.dir/build“ ist nichts zu tun.
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird verlassen
@@ -108,37 +146,50 @@ make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRu
 cd SimulationRuntime/OMSI; \
  (cd Build_static; make install);  (cd Build_dynamic; make install); \
 
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libgomp-1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird betreten
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -H/C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI -B/C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static --check-build-system CMakeFiles/Makefile.cmake 0
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libwinpthread-1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -E cmake_progress_start /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/CMakeFiles /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/CMakeFiles/progress.marks
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libtre-5.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make -f CMakeFiles/Makefile2 all
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird betreten
 make -f solver/CMakeFiles/OMSISolver_static.dir/build.make solver/CMakeFiles/OMSISolver_static.dir/depend
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libsystre-0.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird betreten
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -E cmake_depends "MSYS Makefiles" /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/solver /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/solver /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/solver/CMakeFiles/OMSISolver_static.dir/DependInfo.cmake --color=
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libstdc++-6.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird verlassen
 make -f solver/CMakeFiles/OMSISolver_static.dir/build.make solver/CMakeFiles/OMSISolver_static.dir/build
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird betreten
 make[4]: Für das Ziel „solver/CMakeFiles/OMSISolver_static.dir/build“ ist nichts zu tun.
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird verlassen
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libquadmath-0.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libgcc_s_dw2-1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 [ 29%] Built target OMSISolver_static
 make -f base/CMakeFiles/OMSIBase_static.dir/build.make base/CMakeFiles/OMSIBase_static.dir/depend
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird betreten
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -E cmake_depends "MSYS Makefiles" /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/base /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/base /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/base/CMakeFiles/OMSIBase_static.dir/DependInfo.cmake --color=
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libintl-8.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird verlassen
 make -f base/CMakeFiles/OMSIBase_static.dir/build.make base/CMakeFiles/OMSIBase_static.dir/build
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libiconv-2.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird betreten
 make[4]: Für das Ziel „base/CMakeFiles/OMSIBase_static.dir/build“ ist nichts zu tun.
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird verlassen
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libgfortran*.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 [100%] Built target OMSIBase_static
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird verlassen
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -E cmake_progress_start /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/CMakeFiles 0
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libexpat-1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make -f CMakeFiles/Makefile2 preinstall
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird betreten
 make[3]: Für das Ziel „preinstall“ ist nichts zu tun.
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird verlassen
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libopenblas.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 Install the project...
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -P cmake_install.cmake
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/zlib1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 -- Install configuration: "Debug"
 -- Up-to-date: C:/Projekte/omc_neu/openmodelica/build/include/omc/omsi/omsi.h
 -- Up-to-date: C:/Projekte/omc_neu/openmodelica/build/include/omc/omsi/omsi_callbacks.h
@@ -170,33 +221,45 @@ Install the project...
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_static“ wird verlassen
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird betreten
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -H/C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI -B/C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic --check-build-system CMakeFiles/Makefile.cmake 0
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libszip*.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -E cmake_progress_start /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/CMakeFiles /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/CMakeFiles/progress.marks
 make -f CMakeFiles/Makefile2 all
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libhdf5-0.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird betreten
 make -f solver/CMakeFiles/OMSISolver.dir/build.make solver/CMakeFiles/OMSISolver.dir/depend
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/bin/x86_win32/omniORB420_rt.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird betreten
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -E cmake_depends "MSYS Makefiles" /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/solver /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/solver /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/solver/CMakeFiles/OMSISolver.dir/DependInfo.cmake --color=
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/bin/x86_win32/omnithread40_rt.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird verlassen
 make -f solver/CMakeFiles/OMSISolver.dir/build.make solver/CMakeFiles/OMSISolver.dir/build
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird betreten
 make[4]: Für das Ziel „solver/CMakeFiles/OMSISolver.dir/build“ ist nichts zu tun.
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird verlassen
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/bin/x86_win32/omniORB420_rt.dll /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/bin/x86_win32/omnithread40_rt.dll /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
 [ 29%] Built target OMSISolver
 make -f base/CMakeFiles/OMSIBase.dir/build.make base/CMakeFiles/OMSIBase.dir/depend
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird betreten
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -E cmake_depends "MSYS Makefiles" /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/base /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/base /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/base/CMakeFiles/OMSIBase.dir/DependInfo.cmake --color=
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/3rdParty/Sundials/lib/release/mingw/libsundials_kinsol.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird verlassen
 make -f base/CMakeFiles/OMSIBase.dir/build.make base/CMakeFiles/OMSIBase.dir/build
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/3rdParty/Sundials/lib/release/mingw/libsundials_nvecserial.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird betreten
 make[4]: Für das Ziel „base/CMakeFiles/OMSIBase.dir/build“ ist nichts zu tun.
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird verlassen
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/lis/liblis.la /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
 [100%] Built target OMSIBase
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird verlassen
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -E cmake_progress_start /C/Projekte/omc_neu/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/CMakeFiles 0
+(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/lis/liblis.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
 make -f CMakeFiles/Makefile2 preinstall
+(cp -pf /c/Projekte/OMDev_GCC5_3_0/lib/expat-win32-msvc/libexpat.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird betreten
 make[3]: Für das Ziel „preinstall“ ist nichts zu tun.
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird verlassen
+(cp -pf /c/Projekte/OMDev_GCC5_3_0/lib/lapack-win32-msvc/blas_win32_MT.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
 Install the project...
 /C/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake.exe -P cmake_install.cmake
 -- Install configuration: "Debug"
@@ -231,7 +294,11 @@ Install the project...
 -- Up-to-date: C:/Projekte/omc_neu/openmodelica/build/include/omc/omsi/solver/solver_helper.h
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic“ wird verlassen
 test ! `uname` = Darwin || install_name_tool -id @rpath/omsi/libOMSIBase.dylib /c/Projekte/omc_neu/openmodelica/build/lib/omc/omsi/libOMSIBase.dylib
+(cp -pf /c/Projekte/OMDev_GCC5_3_0/lib/lapack-win32-msvc/lapack_win32_MT.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
+mkdir -p /c/Projekte/omc_neu/openmodelica/build/lib/omc/libexec/
 test ! `uname` = Darwin || install_name_tool -id @rpath/omsi/libOMSISolver.dylib /c/Projekte/omc_neu/openmodelica/build/lib/omc/omsi/libOMSISolver.dylib
+(cp -pufr /c/Projekte/OMDev_GCC5_3_0/tools/xsltproc /c/Projekte/omc_neu/openmodelica/build/lib/omc/libexec/)
+(cp -pufr /c/Projekte/OMDev_GCC5_3_0/tools/gnuplot /c/Projekte/omc_neu/openmodelica/build/lib/omc/libexec/)
 cd SimulationRuntime/OMSIC; \
  mkdir -p Build_static; (cd ./Build_static; echo "change to Build_static"; CC="gcc" CXX="g++" CFLAGS="-g -O2 -falign-functions" CXXFLAGS="" CPPFLAGS="" LDFLAGS="" /c/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake -G "MSYS Makefiles" --build . -DPLATFORM=static -DCMAKE_BUILD_TYPE=Debug -DIS_MINGW32=ON -DIS_MINGW64=OFF -DCMAKE_INSTALL_PREFIX:PATH="/c/Projekte/omc_neu/openmodelica/build" -DLIB_OMC=lib/omc ..; make );   mkdir -p Build_dynamic; (cd ./Build_dynamic; echo "change to Build_dynamic"; CC="gcc" CXX="g++" CFLAGS="-g -O2 -falign-functions" CXXFLAGS="" CPPFLAGS="" LDFLAGS="" /c/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake -G "MSYS Makefiles" --build . -DPLATFORM=dynamic -DCMAKE_BUILD_TYPE=Debug -DIS_MINGW32=ON -DIS_MINGW64=OFF -DCMAKE_INSTALL_PREFIX:PATH="/c/Projekte/omc_neu/openmodelica/build" -DLIB_OMC=lib/omc ..; make ); 
 change to Build_static
@@ -358,21 +425,34 @@ Install the project...
 -- Up-to-date: C:/Projekte/omc_neu/openmodelica/build/include/omc/omsic/omsu_event_simulation.h
 -- Up-to-date: C:/Projekte/omc_neu/openmodelica/build/lib/omc/omsi/libOMSIC.a
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic“ wird verlassen
-mkdir -p /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels
-cp -p Examples/*.* /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels/
-rm -f /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels/CMake*.txt
-make -C Compiler/Translation OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build release
-make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/Translation“ wird betreten
-for locale in de sv es; do mkdir -p /c/Projekte/omc_neu/openmodelica/build/share/locale//$locale/LC_MESSAGES && msgfmt -o/c/Projekte/omc_neu/openmodelica/build/share/locale//$locale/LC_MESSAGES/openmodelica.mo $locale.po; done
-make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/Translation“ wird verlassen
 make -C SimulationRuntime/c -f Makefile.omdev.mingw OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/c“ wird betreten
 cp -p libOpenModelicaRuntimeC.a /c/Projekte/omc_neu/openmodelica/build/lib/omc
 # copy header files
+make -f Makefile.omdev.mingw OMC_MINIMAL_RUNTIME=1 OMC_FMI_RUNTIME=1 sourcedist_internal
+make -C ../fmi/export/buildproject -f Makefile.omdev.mingw
 cp -p ./omc_inline.h ./openmodelica_func.h ./openmodelica.h ./omc_simulation_settings.h ./openmodelica_types.h ./simulation_data.h ./ModelicaUtilities.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/
+make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/c“ wird betreten
+mkdir -p /c/Projekte/omc_neu/openmodelica/build/include/omc/c/external_solvers external_solvers
+make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/fmi/export/buildproject“ wird betreten
+mkdir -p /c/Projekte/omc_neu/openmodelica/build/share/omc/runtime/c/fmi/buildproject/
 cp -p ./linearization/linearize.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/linearization/
+cp -p \
+ ../../3rdParty/CMinpack//enorm_.c ../../3rdParty/CMinpack//hybrj_.c ../../3rdParty/CMinpack//dpmpar_.c ../../3rdParty/CMinpack//qrfac_.c ../../3rdParty/CMinpack//qform_.c ../../3rdParty/CMinpack//dogleg_.c ../../3rdParty/CMinpack//r1updt_.c ../../3rdParty/CMinpack//r1mpyq_.c \
+ ../../3rdParty/dgesv//lapack/dgesv.c ../../3rdParty/dgesv//lapack/dgetrf.c ../../3rdParty/dgesv//lapack/dlamch.c ../../3rdParty/dgesv//lapack/ilaenv.c ../../3rdParty/dgesv//lapack/xerbla.c ../../3rdParty/dgesv//lapack/dgetf2.c ../../3rdParty/dgesv//lapack/dgetrs.c ../../3rdParty/dgesv//lapack/dlaswp.c ../../3rdParty/dgesv//lapack/ieeeck.c ../../3rdParty/dgesv//lapack/iparmq.c \
+ ../../3rdParty/dgesv//blas/dgemm.c ../../3rdParty/dgesv//blas/dger.c ../../3rdParty/dgesv//blas/dscal.c ../../3rdParty/dgesv//blas/dswap.c ../../3rdParty/dgesv//blas/dtrsm.c ../../3rdParty/dgesv//blas/idamax.c ../../3rdParty/dgesv//blas/lsame.c \
+ ../../3rdParty/dgesv//libf2c/i_nint.c ../../3rdParty/dgesv//libf2c/pow_di.c ../../3rdParty/dgesv//libf2c/s_cmp.c ../../3rdParty/dgesv//libf2c/s_copy.c \
+ "./external_solvers/"
+cp -a configure.ac /c/Projekte/omc_neu/openmodelica/build/share/omc/runtime/c/fmi/buildproject//
 cp -p ./optimization/OptimizerData.h ./optimization/OptimizerLocalFunction.h ./optimization/OptimizerInterface.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/optimization/
+make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/fmi/export/buildproject“ wird verlassen
 cp -p ./simulation/modelinfo.h ./simulation/options.h ./simulation/simulation_info_json.h ./simulation/simulation_input_xml.h ./simulation/simulation_runtime.h ./simulation/omc_simulation_util.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/
+cp -p \
+ "../../3rdParty/CMinpack//minpack.h" "../../3rdParty/CMinpack//cminpack.h" \
+ "../../3rdParty/dgesv//include/blaswrap.h" \
+ "../../3rdParty/dgesv//include/clapack.h" \
+ "../../3rdParty/dgesv//include/f2c.h" \
+ "/c/Projekte/omc_neu/openmodelica/build/include/omc/c/external_solvers"
 cp -p ./simulation/results/simulation_result.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/results/
 cp -p ./simulation/solver/delay.h ./simulation/solver/epsilon.h ./simulation/solver/fmi_events.h ./simulation/solver/mixedSystem.h ./simulation/solver/linearSystem.h ./simulation/solver/linearSolverLapack.h ./simulation/solver/linearSolverTotalPivot.h ./simulation/solver/model_help.h ./simulation/solver/mixedSearchSolver.h ./simulation/solver/nonlinearSystem.h ./simulation/solver/nonlinearValuesList.h ./simulation/solver/nonlinearSolverHomotopy.h ./simulation/solver/nonlinearSolverHybrd.h ./simulation/solver/stateset.h ./simulation/solver/real_time_sync.h ./simulation/solver/perform_simulation.c.inc ./simulation/solver/perform_qss_simulation.c.inc ./simulation/solver/dassl.h ./simulation/solver/embedded_server.h ./simulation/solver/ida_solver.h ./simulation/solver/omc_math.h ./simulation/solver/events.h ./simulation/solver/synchronous.h ./simulation/solver/external_input.h ./simulation/solver/solver_main.h ./simulation/solver/dae_mode.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/
 cp -p ./simulation/solver/initialization/initialization.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/initialization/
@@ -380,29 +460,9 @@ cp -p ./meta/meta_modelica_builtin_boxptr.h ./meta/meta_modelica_builtin_boxvar.
 cp -p ./gc/omc_gc.h ./gc/memory_pool.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/gc/
 cp -p ./util/base_array.h ./util/boolean_array.h ./util/division.h ./util/generic_array.h ./util/index_spec.h ./util/integer_array.h ./util/java_interface.h ./util/modelica.h ./util/modelica_string.h ./util/omc_error.h ./util/omc_file.h ./util/omc_mmap.h ./util/omc_msvc.h ./util/omc_spinlock.h ./util/read_matlab4.c ./util/read_matlab4.h ./util/read_csv.c ./util/read_csv.h ./util/libcsv.c ./util/libcsv.h ./util/read_write.h ./util/real_array.h ./util/ringbuffer.h ./util/rtclock.h ./util/simulation_options.h ./util/string_array.h ./util/uthash.h ./util/utility.h ./util/varinfo.h ./util/list.h ./util/rational.h ./util/modelica_string_lit.h ./util/omc_init.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/util/
 cp -p ./dataReconciliation/dataReconciliation.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c/dataReconciliation/
-make -f Makefile.omdev.mingw OMC_MINIMAL_RUNTIME=1 OMC_FMI_RUNTIME=1 sourcedist_internal
-make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/c“ wird betreten
-mkdir -p /c/Projekte/omc_neu/openmodelica/build/include/omc/c/external_solvers external_solvers
-cp -p \
- ../../3rdParty/CMinpack//enorm_.c ../../3rdParty/CMinpack//hybrj_.c ../../3rdParty/CMinpack//dpmpar_.c ../../3rdParty/CMinpack//qrfac_.c ../../3rdParty/CMinpack//qform_.c ../../3rdParty/CMinpack//dogleg_.c ../../3rdParty/CMinpack//r1updt_.c ../../3rdParty/CMinpack//r1mpyq_.c \
- ../../3rdParty/dgesv//lapack/dgesv.c ../../3rdParty/dgesv//lapack/dgetrf.c ../../3rdParty/dgesv//lapack/dlamch.c ../../3rdParty/dgesv//lapack/ilaenv.c ../../3rdParty/dgesv//lapack/xerbla.c ../../3rdParty/dgesv//lapack/dgetf2.c ../../3rdParty/dgesv//lapack/dgetrs.c ../../3rdParty/dgesv//lapack/dlaswp.c ../../3rdParty/dgesv//lapack/ieeeck.c ../../3rdParty/dgesv//lapack/iparmq.c \
- ../../3rdParty/dgesv//blas/dgemm.c ../../3rdParty/dgesv//blas/dger.c ../../3rdParty/dgesv//blas/dscal.c ../../3rdParty/dgesv//blas/dswap.c ../../3rdParty/dgesv//blas/dtrsm.c ../../3rdParty/dgesv//blas/idamax.c ../../3rdParty/dgesv//blas/lsame.c \
- ../../3rdParty/dgesv//libf2c/i_nint.c ../../3rdParty/dgesv//libf2c/pow_di.c ../../3rdParty/dgesv//libf2c/s_cmp.c ../../3rdParty/dgesv//libf2c/s_copy.c \
- "./external_solvers/"
-cp -p \
- "../../3rdParty/CMinpack//minpack.h" "../../3rdParty/CMinpack//cminpack.h" \
- "../../3rdParty/dgesv//include/blaswrap.h" \
- "../../3rdParty/dgesv//include/clapack.h" \
- "../../3rdParty/dgesv//include/f2c.h" \
- "/c/Projekte/omc_neu/openmodelica/build/include/omc/c/external_solvers"
 cp Makefile.objs /c/Projekte/omc_neu/openmodelica/build/include/omc/c/
 rm -r ./external_solvers
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/c“ wird verlassen
-make -C ../fmi/export/buildproject -f Makefile.omdev.mingw
-make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/fmi/export/buildproject“ wird betreten
-mkdir -p /c/Projekte/omc_neu/openmodelica/build/share/omc/runtime/c/fmi/buildproject/
-cp -a configure.ac /c/Projekte/omc_neu/openmodelica/build/share/omc/runtime/c/fmi/buildproject//
-make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/fmi/export/buildproject“ wird verlassen
 make -f Makefile.omdev.mingw "libSimulationRuntimeFMI.a" OMC_MINIMAL_RUNTIME=1 OMC_FMI_RUNTIME=1 BUILDPATH=build/fmi OMC_NUM_NONLINEAR_SYSTEMS=1 OMC_NUM_LINEAR_SYSTEMS=1 OMC_NUM_MIXED_SYSTEMS=1
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/c“ wird betreten
 make[3]: „libSimulationRuntimeFMI.a“ ist bereits aktuell.
@@ -429,76 +489,20 @@ make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird betr
 Creating dirs: /c/Projekte/omc_neu/openmodelica/build/bin /c/Projekte/omc_neu/openmodelica/build/lib/omc/emcc /c/Projekte/omc_neu/openmodelica/build/lib/omc /c/Projekte/omc_neu/openmodelica/build/include/omc/c/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/gc/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/linearization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/dataReconciliation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/optimization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/results/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/initialization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/meta/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/util/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi1/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi2/ /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API /c/Projekte/omc_neu/openmodelica/build/share/omc/java/ /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/ /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels /c/Projekte/omc_neu/openmodelica/build/share/man//man1/
 
 make -f Makefile.omdev.mingw -C Compiler/runtime install_bootstrapping BOOTSTRAPPING=1 OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
-make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird betreten
-Skipping libomcruntime-boot.a since we already have an OMC executable
-make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird verlassen
 make -f Makefile.omdev.mingw -C Compiler builtin OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
+make -f Makefile.omdev.mingw -C Parser install_bootstrapping OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build OMENCRYPTION=
+make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird betreten
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler“ wird betreten
 cp FrontEnd/ModelicaBuiltin.mo FrontEnd/MetaModelicaBuiltin.mo NFFrontEnd/NFModelicaBuiltin.mo FrontEnd/PDEModelicaBuiltin.mo /c/Projekte/omc_neu/openmodelica/build/lib/omc
-make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler“ wird verlassen
-make -f Makefile.omdev.mingw -C Parser install_bootstrapping OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build OMENCRYPTION=
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Parser“ wird betreten
 mkdir -p /c/Projekte/omc_neu/openmodelica/build/include//omc/antlr3
+make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler“ wird verlassen
+Skipping libomcruntime-boot.a since we already have an OMC executable
+make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird verlassen
 cp ../3rdParty/antlr/3.2/libantlr3c-3.2/antlr3config.h ../3rdParty/antlr/3.2/libantlr3c-3.2/include/*.h /c/Projekte/omc_neu/openmodelica/build/include//omc/antlr3
 cp libomantlr3.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Parser“ wird verlassen
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird verlassen
-(time cp SimulationRuntime/OpenTurns/* /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/)
-
-real	0m0.277s
-user	0m0.061s
-sys	0m0.077s
-echo Copying needed .dlls to the /c/Projekte/omc_neu/openmodelica/build/bin directory
-Copying needed .dlls to the /c/Projekte/omc_neu/openmodelica/build/bin directory
-# build 32 bit libOpenCL.a
-test ! -f /c/WINDOWS/SysWOW64/OpenCL.dll || gendef - /c/WINDOWS/SysWOW64/OpenCL.dll > /c/Projekte/omc_neu/openmodelica/build/lib/omc/OpenCL.def || true
- * [C:/WINDOWS/SysWOW64/OpenCL.dll] Found PE image
-test ! -f /c/WINDOWS/SysWOW64/OpenCL.dll || dlltool -l /c/Projekte/omc_neu/openmodelica/build/lib/omc/libOpenCL.a -d /c/Projekte/omc_neu/openmodelica/build/lib/omc/OpenCL.def -A -k || true
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libgomp-1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libwinpthread-1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libtre-5.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libsystre-0.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libstdc++-6.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libquadmath-0.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libgcc_s_dw2-1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libintl-8.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libiconv-2.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libgfortran*.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libexpat-1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libopenblas.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/zlib1.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libszip*.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/tools/msys/mingw32/bin/libhdf5-0.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/bin/x86_win32/omniORB420_rt.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/bin/x86_win32/omnithread40_rt.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/bin/x86_win32/omniORB420_rt.dll /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/bin/x86_win32/omnithread40_rt.dll /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/3rdParty/Sundials/lib/release/mingw/libsundials_kinsol.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/3rdParty/Sundials/lib/release/mingw/libsundials_nvecserial.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/lis/liblis.la /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
-(cp -puf /c/Projekte/OMDev_GCC5_3_0/lib/lis/liblis.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/)
-(cp -pf /c/Projekte/OMDev_GCC5_3_0/lib/expat-win32-msvc/libexpat.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -pf /c/Projekte/OMDev_GCC5_3_0/lib/lapack-win32-msvc/blas_win32_MT.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-(cp -pf /c/Projekte/OMDev_GCC5_3_0/lib/lapack-win32-msvc/lapack_win32_MT.dll /c/Projekte/omc_neu/openmodelica/build/bin/)
-mkdir -p /c/Projekte/omc_neu/openmodelica/build/lib/omc/libexec/
-(cp -pufr /c/Projekte/OMDev_GCC5_3_0/tools/xsltproc /c/Projekte/omc_neu/openmodelica/build/lib/omc/libexec/)
-(cp -pufr /c/Projekte/OMDev_GCC5_3_0/tools/gnuplot /c/Projekte/omc_neu/openmodelica/build/lib/omc/libexec/)
-(cd tools/debugging/ && time g++ BreakProcess.cpp -o BreakProcess -static-libgcc)
-
-real	0m1.789s
-user	0m0.061s
-sys	0m0.046s
-(cd tools/debugging/ && cp BreakProcess.exe /c/Projekte/omc_neu/openmodelica/build/bin)
-make -C SimulationRuntime/ParModelica/explicit/openclrt -f Makefile.omdev.mingw OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
-make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/ParModelica/explicit/openclrt“ wird betreten
-mkdir -p /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-cp -rp omc_ocl_interface.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-cp -rp omc_ocl_common_header.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-cp -rp omc_ocl_memory_ops.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-cp -rp libParModelicaExpl.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/
-cp -rp ParModelicaBuiltin.mo /c/Projekte/omc_neu/openmodelica/build/lib/omc/
-cp -rp OCLRuntimeUtil.cl /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/ParModelica/explicit/openclrt“ wird verlassen
 (time make -f Makefile.omdev.mingw CFLAGS="-g -O2 -falign-functions" omc-bootstrapped OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build)
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird betreten
 Creating dirs: /c/Projekte/omc_neu/openmodelica/build/bin /c/Projekte/omc_neu/openmodelica/build/lib/omc/emcc /c/Projekte/omc_neu/openmodelica/build/lib/omc /c/Projekte/omc_neu/openmodelica/build/include/omc/c/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/gc/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/linearization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/dataReconciliation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/optimization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/results/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/initialization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/meta/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/util/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi1/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi2/ /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API /c/Projekte/omc_neu/openmodelica/build/share/omc/java/ /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/ /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels /c/Projekte/omc_neu/openmodelica/build/share/man//man1/
@@ -508,16 +512,33 @@ make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird betr
 Creating dirs: /c/Projekte/omc_neu/openmodelica/build/bin /c/Projekte/omc_neu/openmodelica/build/lib/omc/emcc /c/Projekte/omc_neu/openmodelica/build/lib/omc /c/Projekte/omc_neu/openmodelica/build/include/omc/c/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/gc/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/linearization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/dataReconciliation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/optimization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/results/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/initialization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/meta/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/util/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi1/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi2/ /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API /c/Projekte/omc_neu/openmodelica/build/share/omc/java/ /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/ /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels /c/Projekte/omc_neu/openmodelica/build/share/man//man1/
 
 test ! -e .git || cp -puf common/pre-commit.sh `git rev-parse --git-dir`/hooks/pre-commit || echo "unlocated git"
-Current revision: v1.14.0-dev-26587-g501deaf6de
-No change in revision
 cp ./3rdParty/antlr/3.2/tool/antlr-3.2.jar ./3rdParty/antlr/3.2/tool/antlr-2.7.7.jar /c/Projekte/omc_neu/openmodelica/build/share/omc/java//
 make -f Makefile.omdev.mingw /c/Projekte/omc_neu/openmodelica/build/lib/omc/libsundials_ida.a
+cp -pPR 3rdParty/FMIL/build/ExpatEx/install/lib/libexpat.a /c/Projekte/omc_neu/openmodelica/build/lib/omc
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird betreten
+Current revision: v1.14.0-dev-26588-g76a4d70f68
+make -C SimulationRuntime/ParModelica/explicit/openclrt -f Makefile.omdev.mingw OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
 Creating dirs: /c/Projekte/omc_neu/openmodelica/build/bin /c/Projekte/omc_neu/openmodelica/build/lib/omc/emcc /c/Projekte/omc_neu/openmodelica/build/lib/omc /c/Projekte/omc_neu/openmodelica/build/include/omc/c/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/gc/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/linearization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/dataReconciliation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/optimization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/results/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/initialization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/meta/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/util/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi1/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi2/ /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API /c/Projekte/omc_neu/openmodelica/build/share/omc/java/ /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/ /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels /c/Projekte/omc_neu/openmodelica/build/share/man//man1/
+make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/ParModelica/explicit/openclrt“ wird betreten
+mkdir -p /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+No change in revision
+cp -rp omc_ocl_interface.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+make -C SimulationRuntime/opc/ua -f Makefile.omdev.mingw OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
 
+cp -rp omc_ocl_common_header.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/opc/ua“ wird betreten
+cp open62541.h "/c/Projekte/omc_neu/openmodelica/build/include/omc/c"
+cp -rp omc_ocl_memory_ops.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+cp -rp libParModelicaExpl.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/
+cp libomopcua.dll "/c/Projekte/omc_neu/openmodelica/build/lib/omc"
+cp -rp ParModelicaBuiltin.mo /c/Projekte/omc_neu/openmodelica/build/lib/omc/
+test ! ".dll" = ".dll" || cp libomopcua.dll "/c/Projekte/omc_neu/openmodelica/build/bin"
+cp -rp OCLRuntimeUtil.cl /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
+make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/ParModelica/explicit/openclrt“ wird verlassen
 make[4]: „/c/Projekte/omc_neu/openmodelica/build/lib/omc/libsundials_ida.a“ ist bereits aktuell.
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird verlassen
-cp -pPR 3rdParty/FMIL/build/ExpatEx/install/lib/libexpat.a /c/Projekte/omc_neu/openmodelica/build/lib/omc
+make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/opc/ua“ wird verlassen
+test ! `uname` = Darwin || (install_name_tool -id @rpath/libomopcua.dylib "/c/Projekte/omc_neu/openmodelica/build/lib/omc/libomopcua.dylib")
 cd SimulationRuntime/OMSI; \
  mkdir -p Build_static; (cd ./Build_static; echo "change to Build_static"; CC="gcc" CXX="g++" CFLAGS="-g -O2 -falign-functions -falign-functions -falign-functions" CXXFLAGS="" CPPFLAGS="" LDFLAGS="" /c/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake -G "MSYS Makefiles" --build . -DPLATFORM=static -DCMAKE_BUILD_TYPE=Debug -DIS_MINGW32=ON -DIS_MINGW64=OFF -DCMAKE_INSTALL_PREFIX:PATH="/c/Projekte/omc_neu/openmodelica/build" -DLIB_OMC=lib/omc ..; make );  mkdir -p Build_dynamic; (cd ./Build_dynamic; echo "change to Build_dynamic"; CC="gcc" CXX="g++" CFLAGS="-g -O2 -falign-functions -falign-functions -falign-functions" CXXFLAGS="" CPPFLAGS="" LDFLAGS="" /c/Projekte/OMDev_GCC5_3_0/bin/cmake/bin/cmake -G "MSYS Makefiles" --build . -DPLATFORM=dynamic -DCMAKE_BUILD_TYPE=Debug -DIS_MINGW32=ON -DIS_MINGW64=OFF -DCMAKE_INSTALL_PREFIX:PATH="/c/Projekte/omc_neu/openmodelica/build" -DLIB_OMC=lib/omc ..; make );
 change to Build_static
@@ -876,37 +897,20 @@ make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird betr
 Creating dirs: /c/Projekte/omc_neu/openmodelica/build/bin /c/Projekte/omc_neu/openmodelica/build/lib/omc/emcc /c/Projekte/omc_neu/openmodelica/build/lib/omc /c/Projekte/omc_neu/openmodelica/build/include/omc/c/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/gc/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/linearization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/dataReconciliation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/optimization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/results/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/simulation/solver/initialization/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/meta/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/util/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi1/ /c/Projekte/omc_neu/openmodelica/build/include/omc/c/fmi2/ /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API /c/Projekte/omc_neu/openmodelica/build/share/omc/java/ /c/Projekte/omc_neu/openmodelica/build/share//omc/scripts/OpenTurns/ /c/Projekte/omc_neu/openmodelica/build/share/doc/omc/testmodels /c/Projekte/omc_neu/openmodelica/build/share/man//man1/
 
 make -f Makefile.omdev.mingw -C Compiler/runtime install_bootstrapping BOOTSTRAPPING=1 OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
-make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird betreten
-Skipping libomcruntime-boot.a since we already have an OMC executable
-make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird verlassen
 make -f Makefile.omdev.mingw -C Compiler builtin OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
+make -f Makefile.omdev.mingw -C Parser install_bootstrapping OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build OMENCRYPTION=
+make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird betreten
 make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler“ wird betreten
 cp FrontEnd/ModelicaBuiltin.mo FrontEnd/MetaModelicaBuiltin.mo NFFrontEnd/NFModelicaBuiltin.mo FrontEnd/PDEModelicaBuiltin.mo /c/Projekte/omc_neu/openmodelica/build/lib/omc
 make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler“ wird verlassen
-make -f Makefile.omdev.mingw -C Parser install_bootstrapping OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build OMENCRYPTION=
 make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Parser“ wird betreten
 mkdir -p /c/Projekte/omc_neu/openmodelica/build/include//omc/antlr3
 cp ../3rdParty/antlr/3.2/libantlr3c-3.2/antlr3config.h ../3rdParty/antlr/3.2/libantlr3c-3.2/include/*.h /c/Projekte/omc_neu/openmodelica/build/include//omc/antlr3
+Skipping libomcruntime-boot.a since we already have an OMC executable
+make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird verlassen
 cp libomantlr3.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/
 make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Parser“ wird verlassen
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird verlassen
-make -C SimulationRuntime/ParModelica/explicit/openclrt -f Makefile.omdev.mingw OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
-make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/ParModelica/explicit/openclrt“ wird betreten
-mkdir -p /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-cp -rp omc_ocl_interface.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-cp -rp omc_ocl_common_header.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-cp -rp omc_ocl_memory_ops.h /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-cp -rp libParModelicaExpl.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/
-cp -rp ParModelicaBuiltin.mo /c/Projekte/omc_neu/openmodelica/build/lib/omc/
-cp -rp OCLRuntimeUtil.cl /c/Projekte/omc_neu/openmodelica/build/include/omc/c//ParModelica/explicit/openclrt/
-make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/ParModelica/explicit/openclrt“ wird verlassen
-make -C SimulationRuntime/opc/ua -f Makefile.omdev.mingw OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
-make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/opc/ua“ wird betreten
-cp open62541.h "/c/Projekte/omc_neu/openmodelica/build/include/omc/c"
-cp libomopcua.dll "/c/Projekte/omc_neu/openmodelica/build/lib/omc"
-test ! ".dll" = ".dll" || cp libomopcua.dll "/c/Projekte/omc_neu/openmodelica/build/bin"
-make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/SimulationRuntime/opc/ua“ wird verlassen
-test ! `uname` = Darwin || (install_name_tool -id @rpath/libomopcua.dylib "/c/Projekte/omc_neu/openmodelica/build/lib/omc/libomopcua.dylib")
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird verlassen
 make -f Makefile.omdev.mingw -C Compiler/boot CC="gcc" CXX="g++" CFLAGS="-g -O2 -falign-functions -falign-functions" CXXFLAGS="" OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/boot“ wird betreten
@@ -917,33 +921,49 @@ make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler“ 
 make -f Makefile.omdev.mingw parser compilerruntime
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/boot“ wird betreten
 make -f Makefile.omdev.mingw -C ../../Parser install OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build OMENCRYPTION=
+make -f Makefile.omdev.mingw -C ../runtime install OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
+make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird betreten
 make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Parser“ wird betreten
 mkdir -p /c/Projekte/omc_neu/openmodelica/build/include//omc/antlr3
 cp ../3rdParty/antlr/3.2/libantlr3c-3.2/antlr3config.h ../3rdParty/antlr/3.2/libantlr3c-3.2/include/*.h /c/Projekte/omc_neu/openmodelica/build/include//omc/antlr3
-cp libomantlr3.a libomparse.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/
-make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Parser“ wird verlassen
-make -f Makefile.omdev.mingw -C ../runtime install OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
-make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird betreten
 cp libomcruntime.a /c/Projekte/omc_neu/openmodelica/build/lib//omc/
+cp libomantlr3.a libomparse.a /c/Projekte/omc_neu/openmodelica/build/lib/omc/
 make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/runtime“ wird verlassen
+make[5]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Parser“ wird verlassen
 make[4]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/boot“ wird verlassen
 make -f Makefile.omdev.mingw --no-print-directory generate-files-in-steps
 make -f Makefile.omdev.mingw templates scripting
 make -f Makefile.omdev.mingw --no-print-directory -C ../..//Compiler/Template OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build 
 make -f Makefile.omdev.mingw --no-print-directory -C ../..//Compiler/Script OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
 make[6]: Für das Ziel „all“ ist nichts zu tun.
+ ** CodegenOMSI_common template compilation ** 
+OPENMODELICAHOME=/c/Projekte/omc_neu/openmodelica/build /c/Projekte/omc_neu/openmodelica/build/bin/omc -d=failtrace CodegenOMSI_common.tpl > CodegenOMSI_common.mo.log || (cat CodegenOMSI_common.mo.log && false)
+ ** CodegenOMSICpp template compilation ** 
+OPENMODELICAHOME=/c/Projekte/omc_neu/openmodelica/build /c/Projekte/omc_neu/openmodelica/build/bin/omc -d=failtrace CodegenOMSICpp.tpl > CodegenOMSICpp.mo.log || (cat CodegenOMSICpp.mo.log && false)
+ ** CodegenOMSIC template compilation ** 
+OPENMODELICAHOME=/c/Projekte/omc_neu/openmodelica/build /c/Projekte/omc_neu/openmodelica/build/bin/omc -d=failtrace CodegenOMSIC.tpl > CodegenOMSIC.mo.log || (cat CodegenOMSIC.mo.log && false)
+ 
+ 
+ 
 make -f Makefile.omdev.mingw Makefile.sources
 make[5]: „Makefile.sources“ ist bereits aktuell.
 make -f Makefile.omdev.mingw interfaces INCLUDESOURCES=1
-make[5]: Für das Ziel „interfaces“ ist nichts zu tun.
+/c/Projekte/omc_neu/openmodelica/build/bin/omc.exe -g=MetaModelica -n=1 build/CodegenOMSICpp.stamp.mo.mos
+/c/Projekte/omc_neu/openmodelica/build/bin/omc.exe -g=MetaModelica -n=1 build/CodegenOMSIC.stamp.mo.mos
+/c/Projekte/omc_neu/openmodelica/build/bin/omc.exe -g=MetaModelica -n=1 build/CodegenOMSI_common.stamp.mo.mos
 make -f Makefile.omdev.mingw Makefile.depends INCLUDESOURCES=1
 make[5]: „Makefile.depends“ ist bereits aktuell.
 make -f Makefile.omdev.mingw generate-files INCLUDESOURCES=1 INCLUDEDEPENDS=1
+/c/Projekte/omc_neu/openmodelica/build/bin/omc.exe -g=MetaModelica -n=1  build/CodegenOMSICpp.stamp.mos
+/c/Projekte/omc_neu/openmodelica/build/bin/omc.exe -g=MetaModelica -n=1  build/CodegenOMSI_common.stamp.mos
+/c/Projekte/omc_neu/openmodelica/build/bin/omc.exe -g=MetaModelica -n=1  build/CodegenOMSIC.stamp.mos
 make -f Makefile.omdev.mingw --no-print-directory install INCLUDESOURCES=1
+gcc -g -O2 -falign-functions -falign-functions -fno-ipa-pure-const -I"/c/Projekte/omc_neu/openmodelica/build/include/omc/c" -I../Util/ -DADD_METARECORD_DEFINITIONS=  -c -o build/CodegenOMSICpp.o build/CodegenOMSICpp.c
+gcc -g -O2 -falign-functions -falign-functions -fno-ipa-pure-const -I"/c/Projekte/omc_neu/openmodelica/build/include/omc/c" -I../Util/ -DADD_METARECORD_DEFINITIONS=  -c -o build/CodegenOMSI_common.o build/CodegenOMSI_common.c
+cp -a build/OpenModelicaScriptingAPI.h /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API
 gcc -shared   -o /c/Projekte/omc_neu/openmodelica/build/lib/omc/libOpenModelicaCompiler.dll build/RuntimeSources.o build/TaskGraphResults.o build/SimulationResults.o build/PriorityQueue.o build/HashTableUnitToString.o build/HashTableStringToUnit.o build/HashTableSimCodeEqCache.o build/HashTableCrToUnit.o build/HashTableCrToCrEqLst.o build/HashTableCrToExpSourceTpl.o build/HashTableExpToIndexExp.o build/HashTableCrIntToExp.o build/HashTableExpToExp.o build/HashTableCrToExp.o build/HashTable4.o build/JSONExt.o build/GraphML.o build/FMIExt.o build/FMI.o build/DiffAlgorithm.o build/AvlSetInt.o build/AvlTreeString.o build/AvlTree.o build/VisualXMLTpl.o build/TaskSystemDump.o build/SimCodeDump.o build/NFInstDumpTpl.o build/GraphMLDumpTpl.o build/GraphvizDump.o build/CodegenXML.o build/CodegenUtilSimulation.o build/CodegenSparseFMI.o build/CodegenModelica.o build/CodegenMidToC.o build/CodegenJS.o build/CodegenJava.o build/CodegenFMUCppHpcom.o build/CodegenOMSICpp.o build/CodegenOMSIC_Equations.o build/CodegenOMSIC.o build/CodegenOMSI_common.o build/CodegenFMUCpp.o build/CodegenFMUCommon.o build/CodegenFMU2.o build/CodegenFMU1.o build/CodegenFMU.o build/CodegenCSharp.o build/CodegenCppInit.o build/CodegenCppHpcom.o build/CodegenCpp.o build/CodegenCppCommon.o build/CodegenEmbeddedC.o build/CodegenC.o build/CodegenAdevs.o build/ReduceDAE.o build/SimCodeUtil.o build/SimCodeMain.o build/SimCode.o build/SerializeModelInfo.o build/SerializeInitXML.o build/HpcOmSimCodeMain.o build/CevalScriptBackend.o build/OpenModelicaScriptingAPI.o build/Binding.o build/BlockCallRewrite.o build/Figaro.o build/RewriteRules.o build/Refactor.o build/SimpleModelicaParser.o build/JSON.o build/LexerModelicaDiff.o build/LexerJSON.o build/NFVerifyModel.o build/NFVariable.o build/NFUnit.o build/NFHashTableCrToUnit.o build/NFHashTableUnitToString.o build/NFHashTableStringToUnit.o build/NFUnitCheck.o build/NFTyping.o build/NFTypeCheck.o build/NFType.o build/NFPackage.o build/NFSubscript.o build/NFStatement.o build/NFSections.o build/NFSimplifyModel.o build/NFSimplifyExp.o build/NFScalarize.o build/NFRestriction.o build/NFRecord.o build/NFRangeIterator.o build/NFPrefixes.o build/NFOperatorOverloading.o build/NFOperator.o build/NFOCConnectionGraph.o build/NFModifier.o build/NFLookupState.o build/NFLookup.o build/NFInstNode.o build/NFInline.o build/NFImport.o build/NFClassTree.o build/NFClass.o build/NFInst.o build/NFHashTableCG.o build/NFHashTable3.o build/NFHashTable.o build/NFFunctionDerivative.o build/NFFunction.o build/NFFlatten.o build/NFFlatModel.o build/NFExpressionIterator.o build/NFExpression.o build/NFExpandExp.o build/NFExpandableConnectors.o build/NFEvalFunctionExt.o build/NFEvalFunction.o build/NFEvalConstants.o build/NFEquation.o build/NFDimension.o build/NFConnector.o build/NFConnectionSets.o build/NFConnections.o build/NFConnection.o build/NFConnectEquations.o build/NFConvertDAE.o build/NFComponentRef.o build/NFComponent.o build/NFComplexType.o build/NFCeval.o build/NFCardinalityTable.o build/NFCall.o build/NFBuiltinFuncs.o build/NFBuiltinCall.o build/NFBuiltin.o build/NFBinding.o build/NFAlgorithm.o build/HashTableMidVar.o build/MidToMid.o build/DAEToMid.o build/MidCode.o build/UnitChecker.o build/UnitAbsynBuilder.o build/NFInstDump.o build/DumpGraphviz.o build/CheckModel.o build/FInst.o build/FGraphStream.o build/FGraphDump.o build/ZeroCrossings.o build/XMLDump.o build/VisualXML.o build/Vectorization.o build/Unit.o build/UnitCheck.o build/Uncertainties.o build/Tearing.o build/SynchronousFeatures.o build/SymbolicJacobian.o build/SymbolicImplicitSolver.o build/Sorting.o build/ResolveLoops.o build/RemoveSimpleEquations.o build/OpenTURNS.o build/OnRelaxation.o build/MathematicaDump.o build/Matching.o build/Initialization.o build/InlineArrayEquations.o build/IndexReduction.o build/HpcOmTaskGraph.o build/HpcOmSchedulerExt.o build/HpcOmScheduler.o build/HpcOmMemory.o build/HpcOmEqSystems.o build/HpcOmBenchmarkExt.o build/HpcOmBenchmark.o build/FindZeroCrossings.o build/ExpressionSolve.o build/EvaluateParameter.o build/EvaluateFunctions.o build/DynamicOptimization.o build/DumpHTML.o build/DumpGraphML.o build/Differentiate.o build/DAEMode.o build/DAEQuery.o build/CommonSubExpression.o build/Causalize.o build/BinaryTreeInt.o build/BinaryTree.o build/BackendVarTransform.o build/BackendVariable.o build/BackendInline.o build/BackendEquation.o build/BackendDump.o build/BackendDAEUtil.o build/BackendDAETransform.o build/BackendDAEOptimize.o build/BackendDAEEXT.o build/BackendDAECreate.o build/BackendDAEFunc.o build/AdjacencyMatrix.o build/ZeroMQ.o build/VarTransform.o build/Util.o build/System.o build/Socket.o build/StringUtil.o build/StackOverflow.o build/Settings.o build/Print.o build/Pointer.o build/Mutable.o build/ModelicaExternalC.o build/List.o build/Lapack.o build/IOStream.o build/IOStreamExt.o build/HashTableStringToProgram.o build/HashTableStringToPath.o build/HashTableSM1.o build/HashTableExpToIndex.o build/HashTable.o build/HashTableCrToExpOption.o build/HashTableCrIListArray.o build/HashTableCrILst.o build/HashTableCrefSimVar.o build/HashTableCG.o build/HashTable5.o build/HashTable3.o build/HashTable2.o build/HashSetString.o build/HashSetExp.o build/HashSet.o build/GraphStreamExt.o build/GraphStream.o build/Graph.o build/GC.o build/Flags.o build/ExpandableArray.o build/ExecStat.o build/Error.o build/ErrorExt.o build/DynLoad.o build/DoubleEndedList.o build/DisjointSets.o build/Debug.o build/Corba.o build/Config.o build/ClockIndexes.o build/BasePVector.o build/BaseHashSet.o build/BaseHashTable.o build/BaseAvlSet.o build/BaseAvlTree.o build/AvlTreeCRToInt.o build/AvlTreeStringString.o build/AvlSetString.o build/AvlSetPath.o build/AvlSetCR.o build/Autoconf.o build/Array.o build/Main.o build/Global.o build/Unparsing.o build/TplParser.o build/Tpl.o build/TplMain.o build/TplCodegen.o build/TplAbsyn.o build/SCodeDumpTpl.o build/GenerateAPIFunctionsTpl.o build/ExpressionDumpTpl.o build/DAEDumpTpl.o build/CodegenUtil.o build/CodegenCFunctions.o build/AbsynDumpTpl.o build/InteractiveUtil.o build/SymbolTable.o build/StaticScript.o build/NFApi.o build/Interactive.o build/GlobalScriptUtil.o build/GlobalScriptDump.o build/GlobalScript.o build/CevalScript.o build/SimCodeVar.o build/SimCodeFunctionUtil.o build/SimCodeFunction.o build/HpcOmSimCode.o build/BackendDAE.o build/FVisit.o build/FTraverse.o build/FResolve.o build/FNode.o build/FMod.o build/FLookup.o build/FGraphBuildEnv.o build/FGraphBuild.o build/FGraph.o build/FExpand.o build/FCore.o build/FBuiltin.o build/ValuesUtil.o build/Values.o build/UnitParserExt.o build/UnitAbsyn.o build/Types.o build/StateMachineFlatten.o build/NFSCodeCheck.o build/NFSCodeLookup.o build/NFSCodeFlattenRedeclare.o build/NFSCodeFlatten.o build/NFSCodeFlattenImports.o build/NFSCodeEnv.o build/NFSCodeDependency.o build/NFInstUtil.o build/NFInstTypes.o build/NFInstPrefix.o build/NFEnvExtends.o build/Static.o build/SCodeUtil.o build/SCodeDump.o build/SCode.o build/PrefixUtil.o build/Prefix.o build/Patternm.o build/ParserExt.o build/Parser.o build/OperatorOverloading.o build/Mod.o build/MMath.o build/MetaUtil.o build/Lookup.o build/InstTypes.o build/InstStateMachineUtil.o build/InstSection.o build/InstExtends.o build/InstUtil.o build/InstBinding.o build/InstFunction.o build/InstDAE.o build/InstVar.o build/Inst.o build/InnerOuter.o build/Inline.o build/Graphviz.o build/ExpressionSimplifyTypes.o build/ExpressionSimplify.o build/Expression.o build/ExpressionDump.o build/ElementSource.o build/Dump.o build/DAEUtil.o build/DAE.o build/DAEDump.o build/Constants.o build/ConnectUtil.o build/Connect.o build/ConnectionGraph.o build/ComponentReference.o build/ClassLoader.o build/ClassInf.o build/Ceval.o build/CevalFunction.o build/Builtin.o build/BackendInterface.o build/Algorithm.o build/AbsynUtil.o build/Absyn.o build/File.o build/RuntimeSources_records.o build/TaskGraphResults_records.o build/SimulationResults_records.o build/PriorityQueue_records.o build/HashTableUnitToString_records.o build/HashTableStringToUnit_records.o build/HashTableSimCodeEqCache_records.o build/HashTableCrToUnit_records.o build/HashTableCrToCrEqLst_records.o build/HashTableCrToExpSourceTpl_records.o build/HashTableExpToIndexExp_records.o build/HashTableCrIntToExp_records.o build/HashTableExpToExp_records.o build/HashTableCrToExp_records.o build/HashTable4_records.o build/JSONExt_records.o build/GraphML_records.o build/FMIExt_records.o build/FMI_records.o build/DiffAlgorithm_records.o build/AvlSetInt_records.o build/AvlTreeString_records.o build/AvlTree_records.o build/VisualXMLTpl_records.o build/TaskSystemDump_records.o build/SimCodeDump_records.o build/NFInstDumpTpl_records.o build/GraphMLDumpTpl_records.o build/GraphvizDump_records.o build/CodegenXML_records.o build/CodegenUtilSimulation_records.o build/CodegenSparseFMI_records.o build/CodegenModelica_records.o build/CodegenMidToC_records.o build/CodegenJS_records.o build/CodegenJava_records.o build/CodegenFMUCppHpcom_records.o build/CodegenOMSICpp_records.o build/CodegenOMSIC_Equations_records.o build/CodegenOMSIC_records.o build/CodegenOMSI_common_records.o build/CodegenFMUCpp_records.o build/CodegenFMUCommon_records.o build/CodegenFMU2_records.o build/CodegenFMU1_records.o build/CodegenFMU_records.o build/CodegenCSharp_records.o build/CodegenCppInit_records.o build/CodegenCppHpcom_records.o build/CodegenCpp_records.o build/CodegenCppCommon_records.o build/CodegenEmbeddedC_records.o build/CodegenC_records.o build/CodegenAdevs_records.o build/ReduceDAE_records.o build/SimCodeUtil_records.o build/SimCodeMain_records.o build/SimCode_records.o build/SerializeModelInfo_records.o build/SerializeInitXML_records.o build/HpcOmSimCodeMain_records.o build/CevalScriptBackend_records.o build/OpenModelicaScriptingAPI_records.o build/Binding_records.o build/BlockCallRewrite_records.o build/Figaro_records.o build/RewriteRules_records.o build/Refactor_records.o build/SimpleModelicaParser_records.o build/JSON_records.o build/LexerModelicaDiff_records.o build/LexerJSON_records.o build/NFVerifyModel_records.o build/NFVariable_records.o build/NFUnit_records.o build/NFHashTableCrToUnit_records.o build/NFHashTableUnitToString_records.o build/NFHashTableStringToUnit_records.o build/NFUnitCheck_records.o build/NFTyping_records.o build/NFTypeCheck_records.o build/NFType_records.o build/NFPackage_records.o build/NFSubscript_records.o build/NFStatement_records.o build/NFSections_records.o build/NFSimplifyModel_records.o build/NFSimplifyExp_records.o build/NFScalarize_records.o build/NFRestriction_records.o build/NFRecord_records.o build/NFRangeIterator_records.o build/NFPrefixes_records.o build/NFOperatorOverloading_records.o build/NFOperator_records.o build/NFOCConnectionGraph_records.o build/NFModifier_records.o build/NFLookupState_records.o build/NFLookup_records.o build/NFInstNode_records.o build/NFInline_records.o build/NFImport_records.o build/NFClassTree_records.o build/NFClass_records.o build/NFInst_records.o build/NFHashTableCG_records.o build/NFHashTable3_records.o build/NFHashTable_records.o build/NFFunctionDerivative_records.o build/NFFunction_records.o build/NFFlatten_records.o build/NFFlatModel_records.o build/NFExpressionIterator_records.o build/NFExpression_records.o build/NFExpandExp_records.o build/NFExpandableConnectors_records.o build/NFEvalFunctionExt_records.o build/NFEvalFunction_records.o build/NFEvalConstants_records.o build/NFEquation_records.o build/NFDimension_records.o build/NFConnector_records.o build/NFConnectionSets_records.o build/NFConnections_records.o build/NFConnection_records.o build/NFConnectEquations_records.o build/NFConvertDAE_records.o build/NFComponentRef_records.o build/NFComponent_records.o build/NFComplexType_records.o build/NFCeval_records.o build/NFCardinalityTable_records.o build/NFCall_records.o build/NFBuiltinFuncs_records.o build/NFBuiltinCall_records.o build/NFBuiltin_records.o build/NFBinding_records.o build/NFAlgorithm_records.o build/HashTableMidVar_records.o build/MidToMid_records.o build/DAEToMid_records.o build/MidCode_records.o build/UnitChecker_records.o build/UnitAbsynBuilder_records.o build/NFInstDump_records.o build/DumpGraphviz_records.o build/CheckModel_records.o build/FInst_records.o build/FGraphStream_records.o build/FGraphDump_records.o build/ZeroCrossings_records.o build/XMLDump_records.o build/VisualXML_records.o build/Vectorization_records.o build/Unit_records.o build/UnitCheck_records.o build/Uncertainties_records.o build/Tearing_records.o build/SynchronousFeatures_records.o build/SymbolicJacobian_records.o build/SymbolicImplicitSolver_records.o build/Sorting_records.o build/ResolveLoops_records.o build/RemoveSimpleEquations_records.o build/OpenTURNS_records.o build/OnRelaxation_records.o build/MathematicaDump_records.o build/Matching_records.o build/Initialization_records.o build/InlineArrayEquations_records.o build/IndexReduction_records.o build/HpcOmTaskGraph_records.o build/HpcOmSchedulerExt_records.o build/HpcOmScheduler_records.o build/HpcOmMemory_records.o build/HpcOmEqSystems_records.o build/HpcOmBenchmarkExt_records.o build/HpcOmBenchmark_records.o build/FindZeroCrossings_records.o build/ExpressionSolve_records.o build/EvaluateParameter_records.o build/EvaluateFunctions_records.o build/DynamicOptimization_records.o build/DumpHTML_records.o build/DumpGraphML_records.o build/Differentiate_records.o build/DAEMode_records.o build/DAEQuery_records.o build/CommonSubExpression_records.o build/Causalize_records.o build/BinaryTreeInt_records.o build/BinaryTree_records.o build/BackendVarTransform_records.o build/BackendVariable_records.o build/BackendInline_records.o build/BackendEquation_records.o build/BackendDump_records.o build/BackendDAEUtil_records.o build/BackendDAETransform_records.o build/BackendDAEOptimize_records.o build/BackendDAEEXT_records.o build/BackendDAECreate_records.o build/BackendDAEFunc_records.o build/AdjacencyMatrix_records.o build/ZeroMQ_records.o build/VarTransform_records.o build/Util_records.o build/System_records.o build/Socket_records.o build/StringUtil_records.o build/StackOverflow_records.o build/Settings_records.o build/Print_records.o build/Pointer_records.o build/Mutable_records.o build/ModelicaExternalC_records.o build/List_records.o build/Lapack_records.o build/IOStream_records.o build/IOStreamExt_records.o build/HashTableStringToProgram_records.o build/HashTableStringToPath_records.o build/HashTableSM1_records.o build/HashTableExpToIndex_records.o build/HashTable_records.o build/HashTableCrToExpOption_records.o build/HashTableCrIListArray_records.o build/HashTableCrILst_records.o build/HashTableCrefSimVar_records.o build/HashTableCG_records.o build/HashTable5_records.o build/HashTable3_records.o build/HashTable2_records.o build/HashSetString_records.o build/HashSetExp_records.o build/HashSet_records.o build/GraphStreamExt_records.o build/GraphStream_records.o build/Graph_records.o build/GC_records.o build/Flags_records.o build/ExpandableArray_records.o build/ExecStat_records.o build/Error_records.o build/ErrorExt_records.o build/DynLoad_records.o build/DoubleEndedList_records.o build/DisjointSets_records.o build/Debug_records.o build/Corba_records.o build/Config_records.o build/ClockIndexes_records.o build/BasePVector_records.o build/BaseHashSet_records.o build/BaseHashTable_records.o build/BaseAvlSet_records.o build/BaseAvlTree_records.o build/AvlTreeCRToInt_records.o build/AvlTreeStringString_records.o build/AvlSetString_records.o build/AvlSetPath_records.o build/AvlSetCR_records.o build/Autoconf_records.o build/Array_records.o build/Main_records.o build/Global_records.o build/Unparsing_records.o build/TplParser_records.o build/Tpl_records.o build/TplMain_records.o build/TplCodegen_records.o build/TplAbsyn_records.o build/SCodeDumpTpl_records.o build/GenerateAPIFunctionsTpl_records.o build/ExpressionDumpTpl_records.o build/DAEDumpTpl_records.o build/CodegenUtil_records.o build/CodegenCFunctions_records.o build/AbsynDumpTpl_records.o build/InteractiveUtil_records.o build/SymbolTable_records.o build/StaticScript_records.o build/NFApi_records.o build/Interactive_records.o build/GlobalScriptUtil_records.o build/GlobalScriptDump_records.o build/GlobalScript_records.o build/CevalScript_records.o build/SimCodeVar_records.o build/SimCodeFunctionUtil_records.o build/SimCodeFunction_records.o build/HpcOmSimCode_records.o build/BackendDAE_records.o build/FVisit_records.o build/FTraverse_records.o build/FResolve_records.o build/FNode_records.o build/FMod_records.o build/FLookup_records.o build/FGraphBuildEnv_records.o build/FGraphBuild_records.o build/FGraph_records.o build/FExpand_records.o build/FCore_records.o build/FBuiltin_records.o build/ValuesUtil_records.o build/Values_records.o build/UnitParserExt_records.o build/UnitAbsyn_records.o build/Types_records.o build/StateMachineFlatten_records.o build/NFSCodeCheck_records.o build/NFSCodeLookup_records.o build/NFSCodeFlattenRedeclare_records.o build/NFSCodeFlatten_records.o build/NFSCodeFlattenImports_records.o build/NFSCodeEnv_records.o build/NFSCodeDependency_records.o build/NFInstUtil_records.o build/NFInstTypes_records.o build/NFInstPrefix_records.o build/NFEnvExtends_records.o build/Static_records.o build/SCodeUtil_records.o build/SCodeDump_records.o build/SCode_records.o build/PrefixUtil_records.o build/Prefix_records.o build/Patternm_records.o build/ParserExt_records.o build/Parser_records.o build/OperatorOverloading_records.o build/Mod_records.o build/MMath_records.o build/MetaUtil_records.o build/Lookup_records.o build/InstTypes_records.o build/InstStateMachineUtil_records.o build/InstSection_records.o build/InstExtends_records.o build/InstUtil_records.o build/InstBinding_records.o build/InstFunction_records.o build/InstDAE_records.o build/InstVar_records.o build/Inst_records.o build/InnerOuter_records.o build/Inline_records.o build/Graphviz_records.o build/ExpressionSimplifyTypes_records.o build/ExpressionSimplify_records.o build/Expression_records.o build/ExpressionDump_records.o build/ElementSource_records.o build/Dump_records.o build/DAEUtil_records.o build/DAE_records.o build/DAEDump_records.o build/Constants_records.o build/ConnectUtil_records.o build/Connect_records.o build/ConnectionGraph_records.o build/ComponentReference_records.o build/ClassLoader_records.o build/ClassInf_records.o build/Ceval_records.o build/CevalFunction_records.o build/Builtin_records.o build/BackendInterface_records.o build/Algorithm_records.o build/AbsynUtil_records.o build/Absyn_records.o build/File_records.o build/_main_omc.o -L./ -lomparse ../..//Compiler/runtime/libomcgraphstream.a ../..//Compiler/runtime/libomcbackendruntime.a -lomcruntime -L"/c/Projekte/omc_neu/openmodelica/build/lib/omc" -lOpenModelicaRuntimeC -lModelicaExternalC -lModelicaIO -lModelicaMatIO -lhdf5 -lszip -lm -lomantlr3 -lregex -lwsock32 -llpsolve55 -luuid -lole32 -lws2_32 -limagehlp -lRpcrt4 -lopenblas -fopenmp -lomcgc -lpthread -L../..//3rdParty/FMIL/install/lib -lfmilib -lexpat -lshlwapi -liconv -lintl -lmetis -Wl,--enable-stdcall-fixup -Bstatic -lstdc++ -Bdynamic -static-libgcc -L../../3rdParty/lpsolve/build/lib -lgfortran -ltre -lomniORB420_rt -lomnithread40_rt -lzmq  -Wl,--stack,16777216,--large-address-aware -L/c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/lib/x86_win32
 test ! ".dll" = ".dylib" || install_name_tool -id @rpath/libOpenModelicaCompiler.dylib /c/Projekte/omc_neu/openmodelica/build/lib/omc/libOpenModelicaCompiler.dll
 gcc build/_main.o  -g -O2 -falign-functions -falign-functions -fno-ipa-pure-const -I"/c/Projekte/omc_neu/openmodelica/build/include/omc/c" -I../Util/ -DADD_METARECORD_DEFINITIONS= -o build/omc.exe -L"/c/Projekte/omc_neu/openmodelica/build/lib/omc" -Wl,--stack,16777216,--large-address-aware -L/c/Projekte/OMDev_GCC5_3_0/lib/omniORB-4.2.0-mingw32/lib/x86_win32 -lOpenModelicaCompiler
-cp -a build/OpenModelicaScriptingAPI.h /c/Projekte/omc_neu/openmodelica/build/include/omc/scripting-API
 cp -a build/omc.exe /c/Projekte/omc_neu/openmodelica/build/bin/
 test ! ".dll" = ".dll" || cp -a /c/Projekte/omc_neu/openmodelica/build/lib/omc/libOpenModelicaCompiler.dll /c/Projekte/omc_neu/openmodelica/build/bin/
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler/boot“ wird verlassen
@@ -953,9 +973,9 @@ cd scripts; cp -puf Compile.bat Prompt.bat openmodelica.lefty default_profiling.
 make[3]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler/Compiler“ wird verlassen
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird verlassen
 
-real	1m19.803s
-user	0m11.021s
-sys	0m30.130s
+real	1m34.473s
+user	0m14.029s
+sys	0m40.198s
 make[1]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/OMCompiler“ wird verlassen
 make -C testsuite/ -f Makefile omc-diff OMBUILDDIR=/c/Projekte/omc_neu/openmodelica/build
 make[1]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/testsuite“ wird betreten
@@ -964,7 +984,3 @@ make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/testsuite/difftool“ w
 gcc -o /c/Projekte/omc_neu/openmodelica/build/bin/omc-diff".exe" lex.yy.o
 make[2]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/testsuite/difftool“ wird verlassen
 make[1]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/testsuite“ wird verlassen
-make -C libraries BUILD_DIR=/c/Projekte/omc_neu/openmodelica/build/lib/omlibrary core
-make[1]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/libraries“ wird betreten
-make[1]: Für das Ziel „core“ ist nichts zu tun.
-make[1]: Verzeichnis „/c/Projekte/omc_neu/openmodelica/libraries“ wird verlassen
